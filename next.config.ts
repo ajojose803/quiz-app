@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,  // Enabling React Strict Mode for better debugging
 };
 
 export default nextConfig;
