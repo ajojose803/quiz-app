@@ -47,7 +47,6 @@ export default function StartQuiz() {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      // Navigate to results page with query parameters
       const query = new URLSearchParams({ answers: JSON.stringify(updatedAnswers) }).toString();
       router.push(`/quiz/result?${query}`);
     }
@@ -56,7 +55,7 @@ export default function StartQuiz() {
   if (questions.length === 0) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-gray-100">
-        <div className="text-xl font-semibold text-gray-700">Loading questions...</div>
+        <div className="text-xl font-semibold text-gray-700">No questions yet...</div>
       </div>
     );
   }
@@ -98,7 +97,6 @@ export default function StartQuiz() {
               </button>
             ))}
 
-            {/* Skip Question Button */}
             <button
               className="w-full px-4 py-3 text-left 
                 bg-gray-100 text-gray-700 

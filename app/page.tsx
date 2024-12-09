@@ -15,9 +15,8 @@ export default function Home() {
           Test your knowledge and challenge yourself!
         </p>
 
-        {/* Updated Flex Layout for Buttons */}
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Add Questions Link */}
           <Link
             href="/quiz/add"
             className="group flex items-center justify-center space-x-2 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
@@ -26,7 +25,6 @@ export default function Home() {
             <span>Add</span>
           </Link>
 
-          {/* Start Quiz Link */}
           <Link
             href="/quiz/start"
             className="group flex items-center justify-center space-x-2 px-6 py-3 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
@@ -35,7 +33,6 @@ export default function Home() {
             <span>Start</span>
           </Link>
 
-          {/* Edit Questions Link */}
           <Link
             href="/quiz/edit"
             className="group flex items-center justify-center space-x-2 px-6 py-3 bg-yellow-500 text-white rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"

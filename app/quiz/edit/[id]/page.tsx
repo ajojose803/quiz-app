@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { use } from 'react'; // Import use from React
+import { use } from 'react'; 
 
 const Page = ({ params }: { params: Promise<{ id: string }> }) => {
   const [question, setQuestion] = useState('');
@@ -12,7 +12,7 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
-  // Unwrap params using React.use()
+ 
   const { id: questionId } = use(params);
 
   useEffect(() => {

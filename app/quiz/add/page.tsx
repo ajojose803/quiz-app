@@ -21,13 +21,12 @@ const AddQuestionForm = () => {
       body: JSON.stringify({ 
         question, 
         options, 
-        answer: answer - 1  // Convert to 0-index for storage
+        answer: answer - 1 
       }),
     });
 
     if (response.ok) {
       setMessage("Question added successfully!");
-      // Clear form after successful submission
       setQuestion("");
       setOptions(["", "", "", ""]);
       setAnswer(1);

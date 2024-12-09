@@ -44,14 +44,13 @@ export default function EditQuestionsList() {
       try {
         const response = await fetch(`/api/questions/${id}`, {
           method: 'DELETE',
-          body: JSON.stringify({}), // Send an empty object as body
+          body: JSON.stringify({}), 
         });
 
         if (!response.ok) {
           throw new Error('Failed to delete question');
         }
 
-        // Remove the deleted question from the state
         setQuestions(questions.filter(q => q.id !== id));
       } catch (err) {
         alert(err instanceof Error ? err.message : 'An error occurred while deleting the question');
@@ -63,7 +62,7 @@ export default function EditQuestionsList() {
     router.push(`/quiz/edit/${id}`);
   };
 
-  // ... rest of your component (loading and error states)
+
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
